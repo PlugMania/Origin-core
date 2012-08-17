@@ -1,5 +1,7 @@
 package info.plugmania.origin_core;
 
-public class Origin_Core {
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Origin_Core extends JavaPlugin {
 
 }

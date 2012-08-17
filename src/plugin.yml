@@ -1,0 +1,5 @@
+name: Origin-Core
+main: info.plugmania.origin_core.Origin_Core
+version: 1.0.0
+author: plugmania
+description: Core of origin with standard commands
