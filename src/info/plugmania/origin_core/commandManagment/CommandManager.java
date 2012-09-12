@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import info.plugmania.origin_core.Origin_Core;
 
@@ -27,8 +28,12 @@ public class CommandManager {
 		return new InvalidCommand(plugin);
 	}
 
-	public void onCommand(CommandSender sender,String command,String[] args) {
+	public void onPlayerCommand(Player sender,String command,String[] args) {
 
+	}
+	
+	public void onServerCommand(String command,String[]args){
+		
 	}
 	
 	
