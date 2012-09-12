@@ -2,6 +2,7 @@ package info.plugmania.origin_core.commandManagment;
 
 import java.util.ArrayList;
 
+import org.bukkit.Server;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -27,14 +28,22 @@ public class CommandManager {
 		}
 		return new InvalidCommand(plugin);
 	}
+	
+	public boolean has(String name){
+		for(Command c:commandList){
+			if(c.getName().equalsIgnoreCase(name)) return true;
+		}
+		return false;
+	}
 
 	public void onPlayerCommand(Player sender,String command,String[] args) {
-
+		get(command).onPlayerCommand(sender, command, args);
 	}
 	
-	public void onServerCommand(String command,String[]args){
-		
+	public void onServerCommand(Server sender,String command,String[] args){
+		get(command).onServerCommand(sender, command, args);
 	}
+	
 	
 	
 }

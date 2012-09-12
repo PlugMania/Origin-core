@@ -2,6 +2,7 @@ package info.plugmania.origin_core.commandManagment;
 
 import info.plugmania.origin_core.Origin_Core;
 
+import org.bukkit.Server;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 
@@ -17,5 +18,5 @@ public abstract class Command {
 	}
 	
 	public abstract void onPlayerCommand(Player sender,String command,String[] args);
-	public abstract void onServerCommand(String command,String[] args);
+	public abstract void onServerCommand(Server sender,String command,String[] args);
 }

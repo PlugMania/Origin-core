@@ -1,6 +1,7 @@
 package info.plugmania.origin_core.commandManagment;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Server;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -15,7 +16,7 @@ public class InvalidCommand extends Command {
 		sender.sendMessage(ChatColor.RED + command + " is not a valid command!");
 	}
 	
-	public void onServerCommand(String c, String[] args) {
+	public void onServerCommand(Server s,String c, String[] args) {
 		//TODO: add code to tell the server off for doing an invalid command.
 	}
 }
